@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<meta charset="UTF-8">
+  	<meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>My HTML Page</title>
+  	<link rel="stylesheet"  href="/My Work/css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <nav class="header-nav">
+                <ul>
+                    <li><a href= "#home">HOME</a></li>
+                    <li><a href= "#work">WORK</a></li>
+                    <li><a href= "#about">ABOUT</a></li>
+                    <li><a href= "#contact">CONTACT</a></li>
+                    <li><a href= "#resume">RESUME</a></li>
+                    <li><a href= "#linkedin">LINKEDIN</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="repeating-title">MY WORK MY WORK MY WORK MY WORK MY WORK MY WORK MY WORK MY WORK MY WORK</div>
+        <div class="portfolio">
+            <div class="section">
+                <img src="/My Work/images/project 1 humane (1).png" alt="Humane Society Redesign">
+                <h1>Non-Profit
+                    Redesign</h1>
+                <p>A group project with the goal of redesigning a non-profit organization’s website. We redesigned the Lynchburg Humane Society’s website. We asked users about their thoughts on the original website to create a more user-friendly, appealing website and mobile prototype.</p>
+                <div class="tasks-goals">
+                    <div class="box">
+                        <h2>Tasks</h2>
+                        <ul>
+                            <li>Research</li>
+                            <li>Design Thinking</li>
+                            <li>Problem Definition</li>
+                            <li>Prototyping</li>
+                        </ul>
+                    </div>
+                    <div class="box">  
+                        <h2>Goals</h2>
+                        <ul>
+                            <li>Improve Navigation</li>
+                            <li>Enhance Content Clarity</li>
+                            <li>User Satisfaction & Engagement</li>
+                            <li>Serve & Advocate for Lost Animals</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <img src="/My Work/images/project 2 nsa.png" alt="NSA Redesign">
+                <h1>Government
+                    Redesign</h1>
+                <p>A solo project with the goal of redesigning a government organization’s website. I redesigned the National Security Agency’s website, as well as created a prototype for a mobile phone.</p>
+                <div class="tasks-goals">
+                    <div class="box">
+                        <h2>Tasks</h2>
+                        <ul>
+                            <li>Research</li>
+                            <li>Design Thinking</li>
+                            <li>Problem Definition</li>
+                            <li>Prototyping</li>
+                        </ul>
+                    </div>
+                    <div class="box">  
+                        <h2>Goals</h2>
+                        <ul>
+                            <li>Streamlined Navigation</li>
+                            <li>Enhance Content Clarity</li>
+                            <li>Modern Visual Design</li>
+                            <li>Fix outdated design</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <img src="/My Work/images/project 3 socialcircle.png" alt="SocialCircle Application">
+                <h1>SocialCircle
+                    Application</h1>
+                <p>A group project with the goal of creating an app to help people with a recurring problem. We created a friendship-making app called “SocialCircle”. This app helps people find meaningful friendships within a close vicinity with the ability to plan hangouts, have shared calendars, and create group chats.</p>
+                <div class="tasks-goals">
+                    <div class="box">
+                        <h2>Tasks</h2>
+                        <ul>
+                            <li>Research</li>
+                            <li>Design Thinking</li>
+                            <li>Problem Definition</li>
+                            <li>Prototyping</li>
+                        </ul>
+                    </div>
+                    <div class="box">  
+                        <h2>Goals</h2>
+                        <ul>
+                            <li>Help Foster Meaningful Connections</li>
+                            <li>Conduct User Research</li>
+                            <li>Implement New Features</li>
+                            <li>Design a Friend-Making Application</li>
+                        </ul>
+                    </div>
+            </div>
+            </div>
+            </div>
+            </div>
+        </div>
+
+    <div id="cta-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Get in Touch</h2>
+            <p>Interested in working together? Contact me to discuss your project and see how I can help!</p>
+            <button id="contact-btn">Contact Me</button>
+        </div>
+    </div>
+
+        <script>
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            });
+
+            document.querySelectorAll('.section').forEach(section => {
+                observer.observe(section);
+            });
+        </script>
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <ul>
+                    <li><a href="#work">WORK</a></li>
+                    <li><a href="#resume">RESUME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#linkedin">LINKEDIN</a></li>
+                </ul>
+            </div>
+        </div>
+            <div class="footer-center">
+                <img src="images/madi_swedick_logo.png" alt="Logo">
+            </div>
+            <div class="footer-right">
+                <p>madisonrswedick@gmail.com</p>
+                <p>(704) 840-5130</p>
+            </div>
+    </footer>
+
+</body>
+
+<script src="/my work/JS/js"></script>
+</html>

@@ -1,0 +1,40 @@
+console.log 
+
+document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classicList.add('visible');
+            }
+        });
+  });
+
+    document.querySelectorAll('.section').forEach(section => {
+     observer.observe(section);
+    });
+
+    const modal = document.getElementById('cta-modal');
+    const closeBtn = document.querySelector('.close-btn');
+    const contactBtn = document.getElementById('contact-btn');
+
+    function openModal(){
+        modal.style.display = 'block';
+    }
+
+    function closeModal() {
+        modal.style.display = 'none';
+    }
+
+    closeBtn.addEventListener('click', closeModal);
+    window.addEventListener('click', (event) => {
+     if (event.target == modal) {
+            closeModal();
+        }
+    });
+
+    window.addEventListener('scroll', () => {
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+         openModal();
+        }
+    });
+});
